@@ -1,0 +1,149 @@
+body {
+    background-color: var(--neutral-dark);
+    font-family: 'Outfit', sans-serif;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    padding: 0 20px;
+}
+
+.cartao {
+    max-width: 346px;
+    background-color: var(--neutral-medium);
+    border-radius: 15px;
+    padding: 25px;
+
+}
+
+.cartao .image-link {
+    position: relative;
+    display: flex;
+}
+
+.cartao .image-link .image {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.cartao .image-link::before {
+    content: '';
+    background-color: cyan;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.cartao .image-link::after {
+    content: '';
+    background: url(../imagens/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.cartao .image-link:hover::before {
+    opacity: 0.4;
+}
+
+.cartao .image-link:hover::after {
+    opacity: 1;
+}
+
+.cartao .title-link .title {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 25px 0 20px;
+
+}
+
+.cartao .title-link .title:hover {
+    color: var(--primary-medium);
+}
+
+.cartao .about {
+    color: var(--primary-soft);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 23px;
+}
+
+.cartao .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.cartao .info .price {
+    color: var(--primary-medium);
+    display: flex;
+
+}
+
+.cartao .info .price::before {
+    content: '';
+    background-image: url(../imagens/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cartao .info .days-left {
+    color: var(--primary-soft);
+    display: flex;
+}
+
+.cartao .info .days-left::before {
+    content: '';
+    background-image: url(../imagens/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cartao .creator {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--neutral-soft);
+
+}
+
+.cartao .creator .avatar {
+    max-width: 33px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.cartao .creator .text {
+    color: var(--primary-soft);
+
+}
+
+.cartao .creator .text .name {
+    color: #ffffff;
+
+}
+
+.cartao .creator .text .name:hover {
+    color: var(--primary-medium);
+}
